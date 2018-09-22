@@ -70,9 +70,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'portfolio:home' %}">Home</a></li>
                 <li><a href="{% url 'portfolio:customer_list' %}">Customers</a></li>
-               <li><a href="{% url 'portfolio:investment_list' %}">Investments</a></li>
+				<li><a href="{% url 'portfolio:investment_list' %}">Investments</a></li>
                 <li><a href="{% url 'portfolio:stock_list' %}">Stocks</a></li>
-
+				<li><a href="{% url 'portfolio:mutualfund_list' %}">MutualFunds</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
@@ -93,12 +93,12 @@
 </nav>
 <div class="content container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-20">
             {% block content %}
                 <div class="links">
                     <!-- Example row of columns -->
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <div class="thumbnail">
                                 <img src="{% static "images/customer.jpg" %}" alt="customer"/>
                                 <div class="caption">
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <div class="thumbnail">
                                 <img src="{% static "images/nonstock.jpg" %}" alt="non-stock"/>
                                 <div class="caption">
@@ -127,13 +127,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <div class="thumbnail">
                                 <img src="{% static "images/stocks.jpg" %}" alt="stocks"/>
                                 <div class="caption">
                                     <h2>Stock Portfolio</h2>
                                     <p>Our Stock portfolios vary across industries.</p>
                                     <p><a class="btn btn-default" href="{% url 'portfolio:stock_list' %}" role="button">View
+                                        details &raquo;</a></p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-5">
+                            <div class="thumbnail">
+                                <img src="{% static "images/mutualfunds.jpg" %}" alt="mutualfunds"/>
+                                <div class="caption">
+                                    <h2>Mutual Fund Portfolio</h2>
+                                    <p>Our Mutual Fund portfolios vary across industries.</p>
+                                    <p><a class="btn btn-default" href="{% url 'portfolio:mutualfund_list' %}" role="button">View
                                         details &raquo;</a></p>
                                 </div>
                             </div>

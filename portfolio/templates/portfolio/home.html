@@ -11,11 +11,11 @@
             {% endif %}
             <div class="content container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-20">
                         <div class="links">
                             <!-- Example row of columns -->
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="thumbnail">
                                         <img src="{% static "images/customer.jpg" %}" alt="customer"/>
                                         <div class="caption">
@@ -30,7 +30,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="thumbnail">
                                         <img src="{% static "images/nonstock.jpg" %}" alt="non-stock"/>
                                         <div class="caption">
@@ -42,13 +42,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="thumbnail">
                                         <img src="{% static "images/stocks.jpg" %}" alt="stocks"/>
                                         <div class="caption">
                                             <h2>Stocks</h2>
                                             <p>Our Stock portfolios vary across industries.</p>
                                             <p><a class="btn btn-primary" href="{% url 'portfolio:stock_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-md-5">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/mutualfunds.jpg" %}" alt="mutualfunds"/>
+                                        <div class="caption">
+                                            <h2>Mutual Fund Portfolio</h2>
+                                            <p>Our Mutual Fund portfolios vary across industries.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:mutualfund_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
                                         </div>
